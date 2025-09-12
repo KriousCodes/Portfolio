@@ -1,252 +1,452 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Aayush Shrestha | Game Developer</title>
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<style>
-:root {
-  --bg:#0b0f16;
-  --accent:#00f0ff;
-  --text:#f0f0f0;
-  --muted:#8c8c8c;
-  --radius:16px;
-}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aayush Shrestha | Game Developer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="unity.png">
+    <link rel="icon" type="image/png" sizes="64x64" href="unity.png">
+    <link rel="icon" type="image/png" sizes="128x128" href="unity.png">
+    <link rel="icon" type="image/png" sizes="256x256" href="unity.png">
 
-* {margin:0;padding:0;box-sizing:border-box;}
-body {background:var(--bg);color:var(--text);font-family:'Orbitron',sans-serif;line-height:1.6;scroll-behavior:smooth;}
-h1,h2,h3,h4 {font-weight:700;}
-h2 {color:var(--accent);text-align:center;margin-bottom:2rem;font-size:2.2rem;}
-a {text-decoration:none;color:var(--accent);}
-section {padding:4rem 2rem;max-width:1100px;margin:auto;}
+    <style>
+        :root {
+            --bg: #0b0f16;
+            --accent: #00f0ff;
+            --text: #f0f0f0;
+            --muted: #8c8c8c;
+            --radius: 16px;
+        }
 
-/* === Header / Hero === */
-header {text-align:center;padding:6rem 2rem 4rem;}
-header h1 {font-size:3rem;color:var(--accent);text-shadow:0 0 10px var(--accent);}
-header p {color:var(--muted);margin-top:0.5rem;font-size:1.2rem;}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-/* === About Section === */
-.about {
-  background: linear-gradient(135deg,#121c2a,#0b1015);
-  border-radius: var(--radius);
-  padding: 3rem;
-  margin-bottom: 4rem;
-  box-shadow: 0 0 25px rgba(0,255,255,0.2);
-}
-.about h2 {font-size:2.2rem;margin-bottom:2rem;color:var(--accent);}
-.about-content {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-  flex-wrap: wrap;
-}
-.about-image {
-  flex: 1 1 250px;
-  text-align: center;
-}
-.about-image img {
-  max-width: 100%;
-  border-radius: var(--radius);
-  box-shadow: 0 0 20px rgba(0,255,255,0.2);
-}
-.about-text {
-  flex: 2 1 400px;
-  font-size: 1.2rem;
-  line-height: 1.7;
-  color: var(--text);
-}
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: 'Orbitron', sans-serif;
+            line-height: 1.6;
+            scroll-behavior: smooth;
 
-/* === Skills & Projects Slider === */
-.skills-container, .projects-container {
-  width: 90%;
-  max-width: 900px;
-  margin: 0 auto;
-  overflow: hidden;
-  border-radius: var(--radius);
-  background: linear-gradient(135deg,#101820,#0b0f16);
-  box-shadow:0 0 25px rgba(0,255,255,0.2);
-  padding: 2rem;
-  position: relative;
-}
-.skills-track, .projects-track {
-  display: flex;
-  transition: transform 0.8s ease-in-out;
-}
-.skill-card, .project {
-  flex: 0 0 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 300px;
-  border-radius: var(--radius);
-  background: linear-gradient(145deg,#1a1f2b,#101820);
-  box-shadow:0 0 15px rgba(0,255,255,0.2), inset 0 0 10px rgba(0,255,255,0.05);
-  padding: 2rem;
-  text-align: center;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
-.skill-card h3, .project h3 {margin-bottom:1rem;font-size:2rem;color:var(--accent);}
-.skill-card p, .project p {color:var(--muted);font-size:1.2rem;line-height:1.5;}
-.skill-card:hover, .project:hover {transform: translateY(-10px) scale(1.05);}
+            /* Prevent text selection & tap highlight */
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
 
-/* === Experience Section === */
-.experience {
-  background: linear-gradient(135deg,#101820,#0b0f16);
-  padding:3rem;
-  border-radius: var(--radius);
-  margin-top:4rem;
-  box-shadow:0 0 20px rgba(0,255,255,0.2);
-}
-.experience ul {list-style:none;padding:0;}
-.experience li {
-  margin:1.2rem 0;
-  padding:1rem 1.5rem;
-  background:#121c2a;
-  border-radius: var(--radius);
-  font-size:1.1rem;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.experience li:hover {transform: translateX(5px);box-shadow:0 0 15px rgba(0,255,255,0.3);}
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-weight: 700;
+        }
 
-/* === Footer === */
-footer {
-  text-align:center;
-  padding:2rem;
-  margin-top:3rem;
-  border-top:1px solid #111;
-  color:var(--muted);
-  font-size:0.9rem;
-}
+        h2 {
+            color: var(--accent);
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 2.2rem;
+        }
 
-/* === Horizontal Social Media Section (centered) === */
-.social-media {
-  padding:4rem 2rem;
-  max-width:1100px;
-  margin: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 30px;
-}
-.social-media a {
-  color: var(--accent);
-  font-size: 2rem;
-  transition: transform 0.3s, color 0.3s;
-}
-.social-media a:hover {
-  transform: scale(1.2);
-  color: #00ffff;
-}
+        a {
+            text-decoration: none;
+            color: var(--accent);
+            -webkit-tap-highlight-color: transparent;
+        }
 
-/* === Responsive === */
-@media (max-width:768px) {
-  header h1 {font-size:2.2rem;}
-  header p {font-size:1rem;}
-  .about-text {text-align: center;}
-  .skill-card, .project {height:250px;}
-  .social-media {gap:20px;}
-  .social-media a {font-size:1.8rem;}
-}
-@media (max-width:480px) {
-  header h1 {font-size:1.8rem;}
-  header p {font-size:0.9rem;}
-  .about-text {text-align: center;}
-  .skill-card, .project {height:220px;padding:1.5rem;}
-  .social-media {gap:15px;}
-  .social-media a {font-size:1.5rem;}
-}
-</style>
+        section {
+            padding: 4rem 2rem;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        /* === Header / Hero === */
+        header {
+            text-align: center;
+            padding: 6rem 2rem 4rem;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            color: var(--accent);
+            text-shadow: 0 0 10px var(--accent);
+        }
+
+        header p {
+            color: var(--muted);
+            margin-top: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        /* === About Section === */
+        .about {
+            background: linear-gradient(135deg, #121c2a, #0b1015);
+            border-radius: var(--radius);
+            padding: 3rem;
+            margin-bottom: 4rem;
+            box-shadow: 0 0 25px rgba(0, 255, 255, 0.2);
+        }
+
+        .about h2 {
+            font-size: 2.2rem;
+            margin-bottom: 2rem;
+            color: var(--accent);
+        }
+
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .about-image {
+            flex: 1 1 250px;
+            text-align: center;
+        }
+
+        .about-image img {
+            max-width: 100%;
+            border-radius: var(--radius);
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+        }
+
+        .about-text {
+            flex: 2 1 400px;
+            font-size: 1.2rem;
+            line-height: 1.7;
+            color: var(--text);
+            text-align: justify;
+            /* ✅ better alignment for desktop */
+        }
+
+        /* === Skills & Projects Slider === */
+        .skills-container,
+        .projects-container {
+            width: 90%;
+            max-width: 900px;
+            margin: 0 auto;
+            overflow: hidden;
+            border-radius: var(--radius);
+            background: linear-gradient(135deg, #101820, #0b0f16);
+            box-shadow: 0 0 25px rgba(0, 255, 255, 0.2);
+            padding: 2rem;
+            position: relative;
+        }
+
+        .skills-track,
+        .projects-track {
+            display: flex;
+            transition: transform 0.8s ease-in-out;
+        }
+
+        .skill-card,
+        .project {
+            flex: 0 0 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 300px;
+            border-radius: var(--radius);
+            background: linear-gradient(145deg, #1a1f2b, #101820);
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.2), inset 0 0 10px rgba(0, 255, 255, 0.05);
+            padding: 2rem;
+            text-align: center;
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        .skill-card h3,
+        .project h3 {
+            margin-bottom: 1rem;
+            font-size: 2rem;
+            color: var(--accent);
+        }
+
+        .skill-card p,
+        .project p {
+            color: var(--muted);
+            font-size: 1.2rem;
+            line-height: 1.5;
+        }
+
+        .skill-card:hover,
+        .project:hover {
+            transform: translateY(-10px) scale(1.05);
+        }
+
+        /* === Experience Section === */
+        .experience {
+            background: linear-gradient(135deg, #101820, #0b0f16);
+            padding: 3rem;
+            border-radius: var(--radius);
+            margin-top: 4rem;
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+        }
+
+        .experience ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .experience li {
+            margin: 1.2rem 0;
+            padding: 1rem 1.5rem;
+            background: #121c2a;
+            border-radius: var(--radius);
+            font-size: 1.1rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .experience li:hover {
+            transform: translateX(5px);
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+        }
+
+        /* === Footer === */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+            border-top: 1px solid #111;
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+
+        /* === Horizontal Social Media Section (centered) === */
+        .social-media {
+            padding: 4rem 2rem;
+            max-width: 1100px;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .social-media a {
+            color: var(--accent);
+            font-size: 2rem;
+            transition: transform 0.3s, color 0.3s;
+        }
+
+        .social-media a:hover {
+            transform: scale(1.2);
+            color: #00ffff;
+        }
+
+        /* === Responsive Fixes === */
+        @media (max-width: 1024px) {
+            section {
+                padding: 3rem 1.5rem;
+            }
+
+            .skills-container,
+            .projects-container {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            header p {
+                font-size: 1rem;
+            }
+
+            .about-content {
+                flex-direction: column;
+            }
+
+            .about-text {
+                font-size: 1rem;
+                text-align: left;
+                /* ✅ fix for mobile */
+            }
+
+            .skill-card,
+            .project {
+                flex: 0 0 100%;
+                height: auto;
+                padding: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.6rem;
+            }
+
+            header p {
+                font-size: 0.85rem;
+            }
+
+            .about-text {
+                font-size: 0.95rem;
+                text-align: left;
+            }
+
+            /* ✅ smaller devices too */
+            .skill-card h3,
+            .project h3 {
+                font-size: 1.4rem;
+            }
+
+            .skill-card p,
+            .project p {
+                font-size: 1rem;
+            }
+
+            .social-media {
+                gap: 12px;
+            }
+
+            .social-media a {
+                font-size: 1.4rem;
+            }
+        }
+    </style>
 </head>
+
 <body>
 
-<header>
-<h1>Aayush Shrestha</h1>
-<p>Intermediate Unity Game Developer | 3 Years Experience</p>
-</header>
+    <header>
+        <h1>Aayush Shrestha</h1>
+        <p>Intermediate Unity Game Developer | 3 Years Experience</p>
+    </header>
 
-<section class="about">
-<h2>About Me</h2>
-<div class="about-content">
-  <div class="about-image">
-    <img src="Me.jpg" alt="Aayush Shrestha">
-  </div>
-  <div class="about-text">
-    <p>Hi, I'm Aayush Shrestha (Derek), an intermediate Unity game developer with 3 years of experience creating immersive and engaging games. My passion for gaming began as a kid playing titles like Contra, sparking my curiosity about how games are made. Over the years, I’ve honed my skills in 3D and 2D game development, AI systems, procedural mechanics, and interactive gameplay design. I specialize in building AI-driven systems, horror mechanics, and seamless player experiences. I also enjoy crafting polished UI/UX interfaces that make gameplay intuitive and fun. My goal is to design games that captivate players through rich atmospheres, challenging mechanics, and dynamic storytelling. I’m constantly learning and experimenting with new tools and techniques to bring innovative ideas to life.</p>
-  </div>
-</div>
-</section>
+    <section class="about">
+        <h2>About Me</h2>
+        <div class="about-content">
+            <div class="about-image">
+                <img src="Me.jpg" alt="Aayush Shrestha">
+            </div>
+            <div class="about-text">
+                <p>Hi, I'm Aayush Shrestha (Derek), an intermediate Unity game developer with 3 years of experience
+                    creating immersive and engaging games. My passion for gaming began as a kid playing titles like
+                    Contra, sparking my curiosity about how games are made. Over the years, I’ve honed my skills in 3D
+                    and 2D game development, AI systems, procedural mechanics, and interactive gameplay design. I
+                    specialize in building AI-driven systems, horror mechanics, and seamless player experiences. I also
+                    enjoy crafting polished UI/UX interfaces that make gameplay intuitive and fun. My goal is to design
+                    games that captivate players through rich atmospheres, challenging mechanics, and dynamic
+                    storytelling. I’m constantly learning and experimenting with new tools and techniques to bring
+                    innovative ideas to life.</p>
+            </div>
+        </div>
+    </section>
 
-<section class="skills">
-<h2>Skills</h2>
-<div class="skills-container">
-  <div class="skills-track" id="skillsTrack">
-    <div class="skill-card"><h3>Unity</h3><p>3D & 2D game development with lighting, physics, and AI systems.</p></div>
-    <div class="skill-card"><h3>C# Programming</h3><p>Clean modular scripting for scalable gameplay systems and prototypes.</p></div>
-    <div class="skill-card"><h3>Game Design</h3><p>Design immersive mechanics and engaging gameplay loops.</p></div>
-    <div class="skill-card"><h3>AI Systems</h3><p>Horror AI, enemy patrols, FSM, and behavior tree implementations.</p></div>
-    <div class="skill-card"><h3>UI/UX</h3><p>Create intuitive HUDs, menus, and interactive player experiences.</p></div>
-  </div>
-</div>
-</section>
+    <section class="skills">
+        <h2>Skills</h2>
+        <div class="skills-container">
+            <div class="skills-track" id="skillsTrack">
+                <div class="skill-card">
+                    <h3>Unity</h3>
+                    <p>3D & 2D game development with lighting, physics, and AI systems.</p>
+                </div>
+                <div class="skill-card">
+                    <h3>C# Programming</h3>
+                    <p>Clean modular scripting for scalable gameplay systems and prototypes.</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Game Design</h3>
+                    <p>Design immersive mechanics and engaging gameplay loops.</p>
+                </div>
+                <div class="skill-card">
+                    <h3>AI Systems</h3>
+                    <p>Horror AI, enemy patrols, FSM, and behavior tree implementations.</p>
+                </div>
+                <div class="skill-card">
+                    <h3>UI/UX</h3>
+                    <p>Create intuitive HUDs, menus, and interactive player experiences.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<section class="experience">
-<h2>Experience</h2>
-<ul>
-<li>3 Years as Unity Game Developer (Intermediate)</li>
-<li>Developed horror and survival mechanics in Unity</li>
-<li>Implemented AI-driven enemy systems and player interaction</li>
-</ul>
-</section>
+    <section class="experience">
+        <h2>Experience</h2>
+        <ul>
+            <li>3 Years as Unity Game Developer (Intermediate)</li>
+            <li>Developed horror and survival mechanics in Unity</li>
+            <li>Implemented AI-driven enemy systems and player interaction</li>
+        </ul>
+    </section>
 
-<section class="projects">
-<h2>Projects</h2>
-<div class="projects-container">
-  <div class="projects-track" id="projectsTrack">
-    <div class="project"><h3>Minute 45</h3><p>Under development: Horror survival game focused on immersive AI and atmosphere.</p></div>
-    <div class="project"><h3>Ghost AI</h3><p>AI-driven horror ghost system with jumpscare and player detection.</p></div>
-    <div class="project"><h3>Endless Runner</h3><p>Procedural endless runner prototype with difficulty scaling and pooling.</p></div>
-  </div>
-</div>
-</section>
+    <section class="projects">
+        <h2>Projects</h2>
+        <div class="projects-container">
+            <div class="projects-track" id="projectsTrack">
+                <div class="project">
+                    <h3>Minute 45</h3>
+                    <p>Under development: Horror survival game focused on immersive AI and atmosphere.</p>
+                </div>
+                <div class="project">
+                    <h3>Ghost AI</h3>
+                    <p>AI-driven horror ghost system with jumpscare and player detection.</p>
+                </div>
+                <div class="project">
+                    <h3>Endless Runner</h3>
+                    <p>Procedural endless runner prototype with difficulty scaling and pooling.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<!-- Centered Horizontal Social Media Section -->
-<section class="social-media">
-  <a href="https://discord.com/users/1255043454300459018" target="_blank"><i class="fab fa-discord"></i></a>
-  <a href="https://www.facebook.com/ayusa.srestha.969294/" target="_blank"><i class="fab fa-facebook"></i></a>
-  <a href="https://www.instagram.com/aayushhhh_xd/" target="_blank"><i class="fab fa-instagram"></i></a>
-  <a href="mailto:derekexe.69@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
-</section>
+    <!-- Centered Horizontal Social Media Section -->
+    <section class="social-media">
+        <a href="https://discord.com" target="_blank"><i class="fab fa-discord"></i></a>
+        <a href="https://www.facebook.com/ayusa.srestha.969294/" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.instagram.com/aayushhhh_xd/" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=derekexe.69@gmail.com" target="_blank">
+          <i class="fas fa-envelope"></i>
+        </a>
+    </section>
 
-<footer>
-<p>© 2025 Aayush Shrestha. All Rights Reserved.</p>
-</footer>
+    <footer>
+        <p>© 2025 Aayush Shrestha. All Rights Reserved.</p>
+    </footer>
 
-<script>
-// Skills slider
-const skillsTrack = document.getElementById("skillsTrack");
-const skillSlides = document.querySelectorAll(".skill-card");
-let skillIndex = 0;
-function moveSkillSlider() {
-  skillIndex = (skillIndex + 1) % skillSlides.length;
-  const slideWidth = skillSlides[0].offsetWidth;
-  skillsTrack.style.transform = `translateX(-${skillIndex * slideWidth}px)`;
-}
-setInterval(moveSkillSlider, 4000);
+    <script>
+        // Skills slider
+        const skillsTrack = document.getElementById("skillsTrack");
+        const skillSlides = document.querySelectorAll(".skill-card");
+        let skillIndex = 0;
+        function moveSkillSlider() {
+            const slideWidth = skillSlides[0].getBoundingClientRect().width;
+            skillIndex = (skillIndex + 1) % skillSlides.length;
+            skillsTrack.style.transform = `translateX(-${skillIndex * slideWidth}px)`;
+        }
+        setInterval(moveSkillSlider, 4000);
+        window.addEventListener("resize", () => {
+            const slideWidth = skillSlides[0].getBoundingClientRect().width;
+            skillsTrack.style.transform = `translateX(-${skillIndex * slideWidth}px)`;
+        });
 
-// Projects slider
-const projectsTrack = document.getElementById("projectsTrack");
-const projectSlides = document.querySelectorAll(".project");
-let projectIndex = 0;
-function moveProjectSlider() {
-  projectIndex = (projectIndex + 1) % projectSlides.length;
-  const projectWidth = projectSlides[0].offsetWidth;
-  projectsTrack.style.transform = `translateX(-${projectIndex * projectWidth}px)`;
-}
-setInterval(moveProjectSlider, 5000);
-</script>
+        // Projects slider
+        const projectsTrack = document.getElementById("projectsTrack");
+        const projectSlides = document.querySelectorAll(".project");
+        let projectIndex = 0;
+        function moveProjectSlider() {
+            const projectWidth = projectSlides[0].getBoundingClientRect().width;
+            projectIndex = (projectIndex + 1) % projectSlides.length;
+            projectsTrack.style.transform = `translateX(-${projectIndex * projectWidth}px)`;
+        }
+        setInterval(moveProjectSlider, 5000);
+        window.addEventListener("resize", () => {
+            const projectWidth = projectSlides[0].getBoundingClientRect().width;
+            projectsTrack.style.transform = `translateX(-${projectIndex * projectWidth}px)`;
+        });
+    </script>
 
 </body>
+
 </html>
